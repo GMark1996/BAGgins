@@ -1,0 +1,10 @@
+﻿<Window x:Class="Microsoft.Samples.Kinect.DiscreteGestureBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Microsoft.Samples.Kinect.DiscreteGestureBasics"
+        Title="Discrete Gesture Basics"
+        Height="650" Width="750"
+        Closing="MainWindow_Closing">
+
+    <Frame Name="FrameContent" Source="MainMenu.xaml" NavigationUIVisibility="Hidden" Margin="0,0,0,4" Grid.RowSpan="2"></Frame>
+</Window>

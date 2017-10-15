@@ -18,11 +18,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class VideoPlayer : Window
     {
         FileInfo[] Files = null;
         //string recognisedMovement = "edsh";
-        public Window1()
+        public VideoPlayer()
         {
             InitializeComponent();
             DirectoryInfo d = new DirectoryInfo(@"C:\LOTR");

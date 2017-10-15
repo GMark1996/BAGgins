@@ -4,16 +4,18 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 {
-    class ScoreBoard
+    class UserScore
     {
         Dictionary<string, float> ownGestures = null;
         string name = null;
-        string dir = @"C:\LOTR\";
+        string dir = @"C:\LOTR\Scores";
         string serializationFile = null;
-        public ScoreBoard(string name)
+
+        public UserScore(string name)
         {
             this.name = name;   
             serializationFile = Path.Combine(dir, name + ".bin");
@@ -62,5 +64,15 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
         }
 
+        public void show(ListBox lb)
+        {
+            Console.Out.WriteLine("Name: " + name+"\nGestures:");
+            lb.Items.Add("Name: " + name + "\nGestures:");
+            ownGestures.ToList().ForEach(x => {
+                Console.Out.WriteLine("Gesture: {0}\t Value: {1}", x.Key, x.Value);
+                lb.Items.Add("Gesture: " + x.Key + "\tValue: " + x.Value);
+            });
+            
+        }
     }
 }
