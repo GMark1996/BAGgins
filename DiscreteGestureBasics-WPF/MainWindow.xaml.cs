@@ -29,16 +29,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static int asd;
-        public int dsa;
-        public static Frame fasfasf;
-
         public MainWindow()
         {
            
         }
 
-        
         void OnTimed(object sender, EventArgs e)
         {
 
