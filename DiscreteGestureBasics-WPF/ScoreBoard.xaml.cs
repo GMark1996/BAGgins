@@ -25,21 +25,28 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         public ScoreBoard()
         {
             InitializeComponent();
-            FileInfo[] Files = null;
-
-            InitializeComponent();
-            DirectoryInfo d = new DirectoryInfo(@"C:\LOTR\Scores");
-            Files = d.GetFiles("*.bin");
-
-            foreach(FileInfo f in Files)
-            {
-                scoreBoard.Add(new UserScore(f.Name.Split('.').First()));
-            }
+            scoreBoard = getUserScores();
 
             foreach(UserScore us in scoreBoard)
             {
                 us.show(ListBox_Score);
             }
+        }
+
+
+        public List<UserScore> getUserScores()
+        {
+            List<UserScore> list = new List<UserScore>();
+            FileInfo[] Files = null;
+            DirectoryInfo d = new DirectoryInfo(@"C:\LOTR\Scores");
+            Files = d.GetFiles("*.bin");
+
+            foreach (FileInfo f in Files)
+            {
+                list.Add(new UserScore(f.Name.Split('.').First()));
+            }
+
+            return list;
         }
     }
 }

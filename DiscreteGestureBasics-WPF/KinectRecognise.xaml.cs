@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Kinect;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,14 +14,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Kinect;
 
 namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 {
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Page1 : Page, INotifyPropertyChanged
+    public partial class KinectRecognise : Page, INotifyPropertyChanged
     {
 
         private KinectSensor kinectSensor = null;
@@ -29,7 +29,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private Body[] bodies = null;
 
         private BodyFrameReader bodyFrameReader = null;
-       
+
         private string statusText = null;
 
         private KinectBodyView kinectBodyView = null;
@@ -37,7 +37,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> List of gesture detectors, there will be one detector created for each potential body (max of 6) </summary>
         private List<GestureDetector> gestureDetectorList = null;
 
-        public Page1()
+        public KinectRecognise()
         {
             UserScore sc = new UserScore("Bubi");
 
@@ -68,7 +68,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
             // initialize the MainWindow
             this.InitializeComponent();
-            
+
             // set our data context objects for display in UI
             this.DataContext = this;
             this.kinectBodyViewbox.DataContext = this.kinectBodyView;
@@ -216,5 +216,3 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         }
     }
 }
-        
-    

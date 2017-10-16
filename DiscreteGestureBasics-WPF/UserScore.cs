@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 {
-    class UserScore
+    public class UserScore
     {
         Dictionary<string, float> ownGestures = null;
         string name = null;
