@@ -63,3 +63,8 @@ D:\Projects\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\MaterialDesignColors
 D:\Projects\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\MaterialDesignThemes.Wpf.dll
 D:\Projects\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\MaterialDesignThemes.Wpf.pdb
 D:\Projects\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\MaterialDesignThemes.Wpf.xml
+D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\Styles\Buttons.baml
+D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\Styles\Colors.baml
+D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\Styles\Fonts.baml
+D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\Styles\Texts.baml
+D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\Styles\Windows.baml

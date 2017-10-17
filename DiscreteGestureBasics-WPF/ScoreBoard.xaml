@@ -5,6 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Microsoft.Samples.Kinect.DiscreteGestureBasics"
       mc:Ignorable="d" 
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{StaticResource MaterialDesignFont}"
       d:DesignHeight="300" d:DesignWidth="300"
       Title="ScoreBoard">
 
