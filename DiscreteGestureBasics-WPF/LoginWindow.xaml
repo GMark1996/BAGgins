@@ -5,11 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Microsoft.Samples.Kinect.DiscreteGestureBasics"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="300" d:DesignWidth="300"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{StaticResource MaterialDesignFont}"
       Title="LoginWindow">
+ 
+        <Grid>
+        <TextBox Name="Name"  Margin="10,10,10,120" TextWrapping="Wrap" Text="" VerticalAlignment="Center"  Background="{StaticResource WordBlueBrush}" HorizontalAlignment="Stretch" MaxWidth="500" />
+        <Button Content="Login" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Center" Width="75" Click="Login" />
+        </Grid>
 
-    <Grid>
-        <TextBox Name="Name" HorizontalAlignment="Center" Margin="10,10,10,120" TextWrapping="Wrap" Text="" VerticalAlignment="Center"  Width="120" />
-        <Button Content="Login" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Center" Width="75" Click="Login"/>
-    </Grid>
 </Page>

@@ -31,7 +31,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     {
         public MainWindow()
         {
-           
+
         }
 
         void OnTimed(object sender, EventArgs e)
