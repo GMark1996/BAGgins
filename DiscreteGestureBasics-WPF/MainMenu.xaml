@@ -9,17 +9,9 @@
       FontFamily="{StaticResource MaterialDesignFont}"
       d:DesignHeight="300" d:DesignWidth="300"
       Title="MainMenu">
-
-    <Grid Margin="101,68,76,96" RenderTransformOrigin="0.389,0.241">
-
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-        </Grid.RowDefinitions>
-
-        <Button Content="Start Game" Click="StartGame"  Grid.Row="0" Margin="3"  />
-        <Button Content="ScoreBoard" Click="ScoreBoard" Grid.Row="1" Margin="3" />
-
+    <Grid>
+        <Button Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top"  Click="LogOut" FontSize="72" Foreground="Red"  Style="{StaticResource TextButton}"/>
+        <Button Content="Start Game" HorizontalAlignment="Center" Margin="10,10,10,150" VerticalAlignment="Center"  Click="StartGame" FontSize="96" Height="Auto" Style="{StaticResource TextButton}"/>
+        <Button Content="Score Board" HorizontalAlignment="Center" Margin="10,10,10,-150" VerticalAlignment="Center"  Click="ScoreBoard" FontSize="96" Height="Auto" Style="{StaticResource TextButton}"/>
     </Grid>
 </Page>

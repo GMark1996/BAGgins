@@ -6,14 +6,13 @@
       xmlns:local="clr-namespace:Microsoft.Samples.Kinect.DiscreteGestureBasics"
       mc:Ignorable="d" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      d:DesignHeight="300" d:DesignWidth="300"
+
       Background="{DynamicResource MaterialDesignPaper}"
-      FontFamily="{StaticResource MaterialDesignFont}"
-      Title="LoginWindow">
+      FontFamily="{StaticResource MaterialDesignFont}">
  
         <Grid>
-        <TextBox Name="Name"  Margin="10,10,10,120" TextWrapping="Wrap" Text="" VerticalAlignment="Center"  Background="{StaticResource WordBlueBrush}" HorizontalAlignment="Stretch" MaxWidth="500" />
-        <Button Content="Login" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Center" Width="75" Click="Login" />
+        <TextBox Name="Name" Foreground="Gold" Margin="10,10,10,420" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="72" TextAlignment="Center"  HorizontalAlignment="Stretch" FontFamily="Freestyle Script" />
+        <Button Content="Login" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Center"  Click="Login" FontSize="72" Height="Auto" FontWeight="Bold" FontFamily="Blackadder ITC"/>
         </Grid>
 
 </Page>

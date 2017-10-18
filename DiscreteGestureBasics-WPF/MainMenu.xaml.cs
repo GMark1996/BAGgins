@@ -38,5 +38,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             ns.Navigate(new Uri("ScoreBoard.xaml", UriKind.Relative));
 
         }
+        private void LogOut(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("LoginWindow.xaml", UriKind.Relative));
+
+        }
     }
 }

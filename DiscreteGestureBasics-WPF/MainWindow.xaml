@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Microsoft.Samples.Kinect.DiscreteGestureBasics"
         Title="Discrete Gesture Basics"
-        Height="650" Width="750"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{StaticResource MaterialDesignFont}"
 >
-
-    <Frame Name="FrameContent" NavigationUIVisibility="Hidden" Margin="0,0,0,4" Grid.RowSpan="2"></Frame>
+    <Grid>
+        <Frame Name="MainContent" Source="/DiscreteGestureBasics-WPF;component/LoginWindow.xaml"  NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
 </Window>

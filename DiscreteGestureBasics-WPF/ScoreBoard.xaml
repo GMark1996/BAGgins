@@ -11,6 +11,7 @@
       Title="ScoreBoard">
 
     <Grid>
-        <ListBox Name="ListBox_Score"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top"  Click="Back" FontSize="72" Foreground="Red"  Style="{StaticResource TextButton}"/>
+        <ListBox Name="ListBox_Score" HorizontalAlignment="Center" Width="500"/>
     </Grid>
 </Page>

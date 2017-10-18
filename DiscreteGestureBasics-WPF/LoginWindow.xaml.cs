@@ -32,10 +32,9 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            UserScore user = new UserScore(Name.Text);
-            NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
-
+               UserScore user = new UserScore(Name.Text);
+               NavigationService ns = NavigationService.GetNavigationService(this);
+               ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
         }
     }
 }
