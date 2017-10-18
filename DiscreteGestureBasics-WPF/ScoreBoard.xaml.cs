@@ -48,5 +48,12 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
             return list;
         }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
+
+        }
     }
 }

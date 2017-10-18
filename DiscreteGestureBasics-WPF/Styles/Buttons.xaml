@@ -125,7 +125,7 @@
         <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}" />
-        <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
+        <Setter Property="FontFamily" Value="Freestyle Script" />
         <Setter Property="Padding" Value="50 10" />
         <Setter Property="Margin" Value="0 10" />
 
