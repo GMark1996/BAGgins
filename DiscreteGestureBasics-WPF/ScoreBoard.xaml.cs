@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -27,9 +28,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             InitializeComponent();
             scoreBoard = getUserScores();
             Dictionary<string, Dictionary<string, float>> topScores = new Dictionary<string, Dictionary<string, float>>();
-            UserScore tmp = new UserScore("Buksi");
-            
-            tmp.addScore("You Shall not Pass", 30);
 
             foreach (UserScore us in scoreBoard)
             {
@@ -57,9 +55,16 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 foreach (KeyValuePair<string,float> scores in gestureScores.Value.OrderByDescending(x => x.Value))
                 {
                     
-                    Console.Out.WriteLine("Gesture: {0}\tPlayer: {1}\tScore:{2}", gestureScores.Key, scores.Key, scores.Value);
 
-                    newstackPanel.Children.Add(new TextBlock { Text = "Player: " +scores.Key + " Record: "+scores.Value });
+                    ListBox listBox = new ListBox();
+                    listBox.ItemsPanel = (ItemsPanelTemplate)XamlReader.Parse("<ItemsPanelTemplate xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"><StackPanel Orientation=\"Horizontal\"/></ItemsPanelTemplate>");
+                    listBox.IsEnabled = false;
+
+                    
+                    listBox.Items.Add(new ListBoxItem() { HorizontalAlignment = HorizontalAlignment.Left, Content = "Player: " + scores.Key });                  
+                    listBox.Items.Add(new ListBoxItem() { HorizontalAlignment = HorizontalAlignment.Right, Content = "Score: " + scores.Value });
+
+                    newstackPanel.Children.Add(listBox);
                     
                     if (++counter == 10)
                         break;
