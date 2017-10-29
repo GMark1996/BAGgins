@@ -42,6 +42,12 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("LoginWindow.xaml", UriKind.Relative));
+        }
+
+        private void GestureMenu(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("GestureMenu.xaml", UriKind.Relative));
 
         }
     }

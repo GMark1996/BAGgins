@@ -13,5 +13,6 @@
         <Button Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top"  Click="LogOut" FontSize="72" Foreground="Red"  Style="{StaticResource TextButton}"/>
         <Button Content="Start Game" HorizontalAlignment="Center" Margin="10,10,10,150" VerticalAlignment="Center"  Click="StartGame" FontSize="96" Height="Auto" Style="{StaticResource TextButton}"/>
         <Button Content="Score Board" HorizontalAlignment="Center" Margin="10,10,10,-150" VerticalAlignment="Center"  Click="ScoreBoard" FontSize="96" Height="Auto" Style="{StaticResource TextButton}"/>
+        <Button Content="Gestures" HorizontalAlignment="Center" Margin="10,10,10,-300" VerticalAlignment="Center"  Click="GestureMenu" FontSize="96" Height="Auto" Style="{StaticResource TextButton}"/>
     </Grid>
 </Page>

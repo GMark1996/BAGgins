@@ -96,6 +96,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GestureMenu.xaml.cs">
+      <DependentUpon>GestureMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KinectMouseControl\KinectControl.cs" />
     <Compile Include="KinectMouseControl\KinectMainWindow.xaml.cs">
       <DependentUpon>KinectMainWindow.xaml</DependentUpon>
@@ -117,6 +120,10 @@
     <Compile Include="VideoPlayer.xaml.cs">
       <DependentUpon>VideoPlayer.xaml</DependentUpon>
     </Compile>
+    <Page Include="GestureMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="KinectMouseControl\KinectMainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
