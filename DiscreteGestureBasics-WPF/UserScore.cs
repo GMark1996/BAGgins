@@ -15,9 +15,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         string dir = @"C:\LOTR\Scores";
         string serializationFile = null;
 
+        public string Name { get => name; set => name = value; }
+
         public UserScore(string name)
         {
-            this.name = name;   
+            this.Name = name;   
             serializationFile = Path.Combine(dir, name + ".bin");
 
             if (File.Exists(serializationFile))
@@ -30,19 +32,16 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
             else
             {
-                ownGestures = new Dictionary<string, float>()
-                {
-                    {"You Shall not Pass", 91.94f},
-                    {"You Shall Pass", 99.99f}
-                };
-                //serialize
-                using (Stream stream = File.Open(serializationFile, FileMode.Create))
-                {
-                    var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                    bformatter.Serialize(stream, ownGestures);
-                }
+                ownGestures = new Dictionary<string, float>();
             }
         }
+
+        public Dictionary<string, float> getGestures()
+        {
+            return ownGestures;
+        }
+
+
 
         public void addScore(string gestureName, float value)
         {
@@ -62,17 +61,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 bformatter.Serialize(stream, ownGestures);
             }
-        }
-
-        public void show(ListBox lb)
-        {
-            Console.Out.WriteLine("Name: " + name+"\nGestures:");
-            lb.Items.Add("Name: " + name + "\nGestures:");
-            ownGestures.ToList().ForEach(x => {
-                Console.Out.WriteLine("Gesture: {0}\t Value: {1}", x.Key, x.Value);
-                lb.Items.Add("Gesture: " + x.Key + "\tValue: " + x.Value);
-            });
-            
         }
     }
 }

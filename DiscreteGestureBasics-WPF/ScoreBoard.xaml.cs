@@ -26,10 +26,47 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             InitializeComponent();
             scoreBoard = getUserScores();
+            Dictionary<string, Dictionary<string, float>> topScores = new Dictionary<string, Dictionary<string, float>>();
+            UserScore tmp = new UserScore("Buksi");
+            
+            tmp.addScore("You Shall not Pass", 30);
 
-            foreach(UserScore us in scoreBoard)
+            foreach (UserScore us in scoreBoard)
             {
-                us.show(ListBox_Score);
+                foreach(KeyValuePair<string,float> pair in us.getGestures())
+                {
+                    if (topScores.ContainsKey(pair.Key))
+                    {
+                        topScores[pair.Key].Add(us.Name, pair.Value);
+                    }
+                    else
+                    {
+                        topScores.Add(pair.Key, new Dictionary<string, float>() { { us.Name, pair.Value } });
+                    }
+                }         
+            }
+
+
+            foreach(KeyValuePair<string,Dictionary<string,float>> gestureScores in topScores)
+            {
+                int counter = 0;
+                Expander expander = new Expander();
+                StackPanel newstackPanel = new StackPanel();
+                expander.Header = gestureScores.Key;
+
+                foreach (KeyValuePair<string,float> scores in gestureScores.Value.OrderByDescending(x => x.Value))
+                {
+                    
+                    Console.Out.WriteLine("Gesture: {0}\tPlayer: {1}\tScore:{2}", gestureScores.Key, scores.Key, scores.Value);
+
+                    newstackPanel.Children.Add(new TextBlock { Text = "Player: " +scores.Key + " Record: "+scores.Value });
+                    
+                    if (++counter == 10)
+                        break;
+                }
+                expander.Content = newstackPanel;
+                ListBox_Score.Items.Add(expander);
+
             }
         }
 
