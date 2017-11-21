@@ -41,7 +41,6 @@ D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\DiscreteGestureBasic
 D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\DiscreteGestureBasics-WPF.exe
 D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\DiscreteGestureBasics-WPF.pdb
 D:\Projects\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\DiscreteGestureBasicsWPF.csprojResolveAssemblyReference.cache
-C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\Database\Seated.gbd
 C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\DiscreteGestureBasics-WPF.exe.config
 C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\DiscreteGestureBasics-WPF.exe
 C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\DiscreteGestureBasics-WPF.pdb
@@ -133,3 +132,6 @@ d:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\DiscreteGe
 D:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\Database\LordOfTheKinect.gbd
 d:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\test.g.cs
 d:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\test.baml
+C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\test.g.cs
+C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\bin\x86\Debug\Database\LordOfTheKinect.gbd
+C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\test.baml

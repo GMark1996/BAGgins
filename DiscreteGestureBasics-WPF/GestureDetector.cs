@@ -20,14 +20,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         VideoPlayer w1;
         /// <summary> Path to the gesture database that was trained with VGB </summary>
-<<<<<<< HEAD
         private string gestureDatabase;
-=======
-        private readonly string gestureDatabase = @"Database\LordOfTheKinect.gbd";
->>>>>>> d18a717a118ba005900e1b7f25c0ddf440e34558
 
-        /// <summary> Name of the discrete gesture in the database that we want to track </summary>
-        private static VideoPlayer w1 = new VideoPlayer();
         private static test tmp = new test();
         private readonly string[] Gandalf = { "GandalfP1", "GandalfP2", "GandalfP3", "GandalfP4" };
         private Boolean[] GandalfPr = { false, false, false, false };
@@ -46,7 +40,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <param name="gestureResultView">GestureResultView object to store gesture results of a single body to</param>
         public GestureDetector(KinectSensor kinectSensor, GestureResultView gestureResultView, String databasePath, String videoPath)
         {
-            gestureDatabase = @databasePath;
+            gestureDatabase = databasePath;
             this.videoPath = videoPath;
 
             if (kinectSensor == null)
@@ -203,16 +197,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                     if (result.Confidence > 0.2f)
                                     {
-<<<<<<< HEAD
-                                        if (w1 == null)
-                                        {
-                                            w1 = new VideoPlayer();
 
-                                            w1.Show();
-                                            w1.playVideo(videoPath);
-                                        }
-                                        
-=======
                                         
 
                                         if (GandalfPr[1] == false && GandalfPr[2] == false && GandalfPr[3] == false)
@@ -227,9 +212,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                             //tmp.Show();
                                         }
-
-
->>>>>>> d18a717a118ba005900e1b7f25c0ddf440e34558
                                     }
 
 
@@ -324,10 +306,13 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                         }
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true && GandalfPr[3] == true)
                                         {
-                                           
-                                            w1.Show();
-                                            w1.playVideo("GIF");
+                                            if (w1 == null)
+                                            {
+                                                w1 = new VideoPlayer();
 
+                                                w1.Show();
+                                                w1.playVideo(videoPath);
+                                            }
                                         }
 
 
