@@ -72,12 +72,15 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             // set our data context objects for display in UI
             this.DataContext = this;
             this.kinectBodyViewbox.DataContext = this.kinectBodyView;
+        }
 
+        public void addDetector(String database, String videoLink)
+        {
             int maxBodies = this.kinectSensor.BodyFrameSource.BodyCount;
             for (int i = 0; i < maxBodies; ++i)
             {
                 GestureResultView result = new GestureResultView(i, false, false, 0.0f);
-                GestureDetector detector = new GestureDetector(this.kinectSensor, result);
+                GestureDetector detector = new GestureDetector(this.kinectSensor, result, database, videoLink);
                 this.gestureDetectorList.Add(detector);
             }
         }

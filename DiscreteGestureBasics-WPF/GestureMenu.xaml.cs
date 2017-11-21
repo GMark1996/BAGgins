@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Kinect;
 
 namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 {
@@ -23,10 +24,23 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
     public partial class GestureMenu : Page
     {
+        KinectRecognise knr = null;
+        private KinectSensor kinectSensor = null;
+        private BodyFrameReader bodyFrameReader = null;
+
         ListBox lb = new ListBox();
         public GestureMenu()
         {
             InitializeComponent();
+
+            this.kinectSensor = KinectSensor.GetDefault();
+
+            // open the sensor
+            this.kinectSensor.Open();
+
+  
+            // open the reader for the body frames
+            this.bodyFrameReader = this.kinectSensor.BodyFrameSource.OpenReader();
 
             DirectoryInfo d = new DirectoryInfo(@"C:\LOTR\GIF");
             FileInfo[] Files = d.GetFiles("*.gif");
@@ -38,6 +52,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                 melem.MediaEnded += new RoutedEventHandler(gif_MediaEnded);
                 melem.Source = new Uri(f.FullName);
+                melem.Name = f.Name.Split('.')[0];
                 melem.UnloadedBehavior = MediaState.Manual;
 
                 melem.MouseLeftButtonDown += new MouseButtonEventHandler(openGesture);
@@ -62,8 +77,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         private void openGesture(object sender, RoutedEventArgs e)
         {
-
             MediaElement litem = ((MediaElement)sender);
+            Console.Out.WriteLine(litem.Name);
+            Console.Out.WriteLine("FUUUUUUUUUUUUUUUUUUUUCK");
+            knr = new KinectRecognise();
+
+            knr.addDetector(@"Database\"+ litem.Name +".gbd", litem.Name);
+            
+           
 
 
             lb.Visibility = Visibility.Hidden;
@@ -72,6 +93,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             mediaElement.MediaEnded += new RoutedEventHandler(gif_MediaEnded);           
             mediaElement.MouseDown += new MouseButtonEventHandler(closeGesture);
             mediaElement.Source = litem.Source;
+            
             gestureGifs.Children.Add(mediaElement);
         }
 

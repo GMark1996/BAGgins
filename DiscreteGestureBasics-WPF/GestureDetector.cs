@@ -17,12 +17,15 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     /// </summary>
     public class GestureDetector : IDisposable
     {
+
+        VideoPlayer w1;
         /// <summary> Path to the gesture database that was trained with VGB </summary>
-        private readonly string gestureDatabase = @"Database\Seated.gbd";
+        private string gestureDatabase;
 
         /// <summary> Name of the discrete gesture in the database that we want to track </summary>
         private readonly string seatedGestureName = "Seated";
 
+        private string videoPath = null;
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
         private VisualGestureBuilderFrameSource vgbFrameSource = null;
 
@@ -34,8 +37,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// </summary>
         /// <param name="kinectSensor">Active sensor to initialize the VisualGestureBuilderFrameSource object with</param>
         /// <param name="gestureResultView">GestureResultView object to store gesture results of a single body to</param>
-        public GestureDetector(KinectSensor kinectSensor, GestureResultView gestureResultView)
+        public GestureDetector(KinectSensor kinectSensor, GestureResultView gestureResultView, String databasePath, String videoPath)
         {
+            gestureDatabase = @databasePath;
+            this.videoPath = videoPath;
+
             if (kinectSensor == null)
             {
                 throw new ArgumentNullException("kinectSensor");
@@ -183,10 +189,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                     if(result.Confidence > 0.9f)
                                     {
-                                        VideoPlayer w1 = new VideoPlayer();
+                                        if (w1 == null)
+                                        {
+                                            w1 = new VideoPlayer();
+
+                                            w1.Show();
+                                            w1.playVideo(videoPath);
+                                        }
                                         
-                                        w1.Show();
-                                        w1.playVideo("edsh");
                                     }
                                 }
                             }
