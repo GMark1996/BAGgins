@@ -20,10 +20,17 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         VideoPlayer w1;
         /// <summary> Path to the gesture database that was trained with VGB </summary>
+<<<<<<< HEAD
         private string gestureDatabase;
+=======
+        private readonly string gestureDatabase = @"Database\LordOfTheKinect.gbd";
+>>>>>>> d18a717a118ba005900e1b7f25c0ddf440e34558
 
         /// <summary> Name of the discrete gesture in the database that we want to track </summary>
-        private readonly string seatedGestureName = "Seated";
+        private static VideoPlayer w1 = new VideoPlayer();
+        private static test tmp = new test();
+        private readonly string[] Gandalf = { "GandalfP1", "GandalfP2", "GandalfP3", "GandalfP4" };
+        private Boolean[] GandalfPr = { false, false, false, false };
 
         private string videoPath = null;
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
@@ -69,15 +76,20 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             // load the 'Seated' gesture from the gesture database
             using (VisualGestureBuilderDatabase database = new VisualGestureBuilderDatabase(this.gestureDatabase))
             {
-                // we could load all available gestures in the database with a call to vgbFrameSource.AddGestures(database.AvailableGestures), 
+                // we could load all available gestures in the database with a call to a, 
                 // but for this program, we only want to track one discrete gesture from the database, so we'll load it by name
-                foreach (Gesture gesture in database.AvailableGestures)
-                {
-                    if (gesture.Name.Equals(this.seatedGestureName))
+
+                /*foreach (Gesture gesture in database.AvailableGestures)
+                {   
+                    if (gesture.Name.Equals(this.gesturename))
                     {
                         this.vgbFrameSource.AddGesture(gesture);
                     }
-                }
+                  
+                }*/
+
+                vgbFrameSource.AddGestures(database.AvailableGestures);
+
             }
         }
 
@@ -177,8 +189,10 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                         // we only have one gesture in this source object, but you can get multiple gestures
                         foreach (Gesture gesture in this.vgbFrameSource.Gestures)
                         {
-                            if (gesture.Name.Equals(this.seatedGestureName) && gesture.GestureType == GestureType.Discrete)
+                            if (gesture.Name.Equals(this.Gandalf[0]) && gesture.GestureType == GestureType.Discrete)
                             {
+
+                               
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
@@ -187,8 +201,9 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
-                                    if(result.Confidence > 0.9f)
+                                    if (result.Confidence > 0.2f)
                                     {
+<<<<<<< HEAD
                                         if (w1 == null)
                                         {
                                             w1 = new VideoPlayer();
@@ -197,9 +212,135 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                             w1.playVideo(videoPath);
                                         }
                                         
+=======
+                                        
+
+                                        if (GandalfPr[1] == false && GandalfPr[2] == false && GandalfPr[3] == false)
+                                        {
+
+                                            GandalfPr[0] = true;
+                                            GandalfPr[1] = false;
+                                            GandalfPr[2] = false;
+                                            GandalfPr[3] = false;
+
+                                            tmp.status(GandalfPr);
+
+                                            //tmp.Show();
+                                        }
+
+
+>>>>>>> d18a717a118ba005900e1b7f25c0ddf440e34558
                                     }
+
+
                                 }
                             }
+                       
+
+                            
+                            if (gesture.Name.Equals(this.Gandalf[1]) && gesture.GestureType == GestureType.Discrete)
+                            {
+
+                               
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+
+                                    if (result.Confidence > 0.2f)
+                                    {
+                                         if (GandalfPr[0] == true && GandalfPr[2]==false && GandalfPr[3]== false)
+                                         {
+                                            GandalfPr[1] = true;
+
+                                            tmp.status(GandalfPr);
+                                            //tmp.Show();
+
+
+                                          }
+                                    }
+
+                                }
+
+
+                            }
+                          
+                         
+                            if (gesture.Name.Equals(this.Gandalf[2]) && gesture.GestureType == GestureType.Discrete)
+                            {
+
+                               
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+
+                                    if (result.Confidence > 0.3f)
+                                    {
+
+                                        if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[3] == false)
+                                        {
+                                            GandalfPr[2] = true;
+                                            tmp.status(GandalfPr);
+                                            //tmp.Show();
+
+                                        }
+                                    }
+                                }
+
+
+                            }
+                      
+                        
+                            
+                            if (gesture.Name.Equals(this.Gandalf[3]) && gesture.GestureType == GestureType.Discrete)
+                            {
+
+                               
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+
+                                    if (result.Confidence > 0.3f)
+                                    {
+
+
+                                        if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true)
+                                        {
+                                            GandalfPr[3] = true;
+                                            tmp.status(GandalfPr);
+                                            tmp.Show();
+
+                                        }
+                                        if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true && GandalfPr[3] == true)
+                                        {
+                                           
+                                            w1.Show();
+                                            w1.playVideo("GIF");
+
+                                        }
+
+
+                                    }
+
+                                    
+                                }
+
+
+                            }
+                        
+                         
+
                         }
                     }
                 }
