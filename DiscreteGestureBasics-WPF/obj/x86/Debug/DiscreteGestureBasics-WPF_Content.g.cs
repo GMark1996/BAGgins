@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/seated.gbd")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/lordofthekinect.gbd")]
 
 
