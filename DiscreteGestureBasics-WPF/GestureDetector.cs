@@ -215,6 +215,13 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                             //tmp.Show();
                                         }
+                                        if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true && GandalfPr[3] == true)
+                                        {
+                                            GandalfPr[0] = true;
+                                            GandalfPr[1] = false;
+                                            GandalfPr[2] = false;
+                                            GandalfPr[3] = false;
+                                        }
                                     }
 
 
@@ -282,8 +289,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                             }
                       
-                        
-                            
+                         
                             if (gesture.Name.Equals(this.Gandalf[3]) && gesture.GestureType == GestureType.Discrete)
                             {
 
