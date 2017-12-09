@@ -10,8 +10,48 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="MainMenu">
     <Grid>
-        <Button Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top"  Click="LogOut" FontSize="72" Foreground="Red"  Style="{StaticResource TextButton}"/>
-        <Button Content="Start Game" HorizontalAlignment="Center" Margin="10,10,10,150" VerticalAlignment="Center"  Click="GestureMenu" FontSize="96" Height="Auto" Style="{StaticResource TextButton}"/>
-        <Button Content="Score Board" HorizontalAlignment="Center" Margin="10,10,10,-150" VerticalAlignment="Center"  Click="ScoreBoard" FontSize="96" Height="Auto" Style="{StaticResource TextButton}"/>
+        <Button Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top"  Click="LogOut" FontSize="72" Foreground="Red"  Style="{StaticResource TextButton}"></Button>
+        <Button Content="Start Game" HorizontalAlignment="Center" Margin="10,10,10,150" VerticalAlignment="Center"  Click="GestureMenu" FontSize="96" Height="Auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="Score Board" HorizontalAlignment="Center" Margin="10,10,10,-150" VerticalAlignment="Center"  Click="ScoreBoard" FontSize="96" Height="Auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Page>
