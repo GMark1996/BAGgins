@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< HEAD
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\GestureMenu.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\KinectRecognise.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\LoginWindow.xaml;;
@@ -13,4 +14,19 @@ FD:\Projects\Bag\DiscreteGestureBasics-WPF\Styles\Texts.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\Styles\Windows.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\test.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\VideoPlayer.xaml;;
+=======
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\GestureMenu.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\KinectRecognise.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\LoginWindow.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\MainMenu.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\MainWindow.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\ScoreBoard.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\Styles\Buttons.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\Styles\Colors.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\Styles\Fonts.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\Styles\Texts.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\Styles\Windows.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\test.xaml;;
+Fd:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\VideoPlayer.xaml;;
+>>>>>>> 55d18026ff8f8c4b06bc6983ac21a240e0ff0bc1
 
