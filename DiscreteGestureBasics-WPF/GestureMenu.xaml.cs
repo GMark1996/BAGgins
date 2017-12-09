@@ -103,6 +103,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             lb.Visibility = Visibility.Visible;
         }
 
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
 
+        }
     }
 }

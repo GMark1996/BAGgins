@@ -9,5 +9,6 @@
       Title="Gestures">
 
     <Grid Name="gestureGifs">
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top"  Click="Back" FontSize="72" Foreground="Red"  Style="{StaticResource TextButton}"/>
     </Grid>
 </Page>
