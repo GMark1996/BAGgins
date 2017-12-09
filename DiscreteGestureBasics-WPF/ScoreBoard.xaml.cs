@@ -80,7 +80,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             List<UserScore> list = new List<UserScore>();
             FileInfo[] Files = null;
-            DirectoryInfo d = new DirectoryInfo(@"C:\LOTR\Scores");
+            DirectoryInfo d = new DirectoryInfo(@".\LOTR\Scores");
             Files = d.GetFiles("*.bin");
 
             foreach (FileInfo f in Files)

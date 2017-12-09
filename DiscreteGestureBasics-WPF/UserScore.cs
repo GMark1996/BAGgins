@@ -12,7 +12,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     {
         Dictionary<string, float> ownGestures = null;
         string name = null;
-        string dir = @"C:\LOTR\Scores";
+        string dir = @".\LOTR\Scores";
         string serializationFile = null;
 
         public string Name { get => name; set => name = value; }
