@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿D:\Projects\Bag\DiscreteGestureBasics-WPF\obj\x86\Debug\GeneratedInternalTypeHelper.g.i.cs
 
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\GestureMenu.xaml;;
@@ -13,4 +14,21 @@ FD:\Projects\Bag\DiscreteGestureBasics-WPF\Styles\Texts.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\Styles\Windows.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\test.xaml;;
 FD:\Projects\Bag\DiscreteGestureBasics-WPF\VideoPlayer.xaml;;
+=======
+﻿C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\GeneratedInternalTypeHelper.g.i.cs
+
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\GestureMenu.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\KinectRecognise.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\LoginWindow.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\MainMenu.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\MainWindow.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\ScoreBoard.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\Styles\Buttons.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\Styles\Colors.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\Styles\Fonts.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\Styles\Texts.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\Styles\Windows.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\test.xaml;;
+FC:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\VideoPlayer.xaml;;
+>>>>>>> 02ac3e45710f0182c84e11885a5b4b4c3628c52d
 

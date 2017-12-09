@@ -42,7 +42,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             // open the reader for the body frames
             this.bodyFrameReader = this.kinectSensor.BodyFrameSource.OpenReader();
 
-            DirectoryInfo d = new DirectoryInfo(@"C:\LOTR\GIF");
+            DirectoryInfo d = new DirectoryInfo(@".\LOTR\GIF");
             FileInfo[] Files = d.GetFiles("*.gif");
 
 

@@ -34,6 +34,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
           
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            
         }
 
         void OnTimed(object sender, EventArgs e)
