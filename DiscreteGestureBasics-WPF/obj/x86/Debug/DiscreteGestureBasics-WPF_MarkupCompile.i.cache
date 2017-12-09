@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\
+d:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\obj\x86\Debug\
 Microsoft.Samples.Kinect.DiscreteGestureBasics
 none
 false
 DEBUG;TRACE
-C:\Users\lvbubi\Documents\GitHub\BAGgins\DiscreteGestureBasics-WPF\App.xaml
+d:\szoftverfejlesztes\BAGgins\DiscreteGestureBasics-WPF\App.xaml
 14859888464
 1-1361558796
-231964888392
-16-397113649
+2377546073
+16-1273535103
 GestureMenu.xaml;KinectMouseControl\KinectMainWindow.xaml;KinectRecognise.xaml;LoginWindow.xaml;MainMenu.xaml;MainWindow.xaml;ScoreBoard.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Styles\Windows.xaml;test.xaml;VideoPlayer.xaml;
 
 True
