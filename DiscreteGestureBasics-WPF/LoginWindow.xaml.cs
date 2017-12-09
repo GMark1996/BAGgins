@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using DiscreteGestureBasicsWPF;
 using System.Windows.Shapes;
 
 namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
@@ -20,6 +21,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     /// </summary>
     public partial class LoginWindow : Page
     {
+        public static DiscreteGestureBasicsWPF.KinectMainWindow kinectMainWindow;
         List<Button> buttons = new List<Button>();
         List<UserScore> Users = new List<UserScore>();
         Boolean useUpperCase = false;
@@ -29,7 +31,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             InitializeComponent();
 
-            DiscreteGestureBasicsWPF.KinectMainWindow kinectMainWindow = new DiscreteGestureBasicsWPF.KinectMainWindow();
+            kinectMainWindow = DiscreteGestureBasicsWPF.KinectMainWindow.getInstance();
+            
             ScoreBoard scoreboard = new ScoreBoard();
             Users = scoreboard.getUserScores();
 

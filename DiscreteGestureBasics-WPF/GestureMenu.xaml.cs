@@ -77,6 +77,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         private void openGesture(object sender, RoutedEventArgs e)
         {
+            LoginWindow.kinectMainWindow = null;
             MediaElement litem = ((MediaElement)sender);
             Console.Out.WriteLine(litem.Name);
             Console.Out.WriteLine("FUUUUUUUUUUUUUUUUUUUUCK");
