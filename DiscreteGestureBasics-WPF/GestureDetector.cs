@@ -315,6 +315,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                                 w1.Show();
                                                 w1.playVideo(videoPath);
+                                                return;
                                             }
                                         }
 
@@ -387,6 +388,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                                 w1.Show();
                                                 w1.playVideo(videoPath);
+                                                return;
                                             }
 
                                         }
