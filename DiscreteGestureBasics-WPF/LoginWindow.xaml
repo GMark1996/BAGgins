@@ -11,66 +11,1167 @@
       FontFamily="{StaticResource MaterialDesignFont}">
 
     <Grid>
+        <TextBlock Grid.ColumnSpan="15" Grid.Row="0" Text="Baggins" Name="Bag" Foreground="Gold" TextWrapping="Wrap" FontSize="108" TextAlignment="Center" FontFamily="Freestyle Script" />
         <TextBox  Grid.ColumnSpan="15" Grid.Row="0" Name="Name" Foreground="Gold" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="72" TextAlignment="Center"  HorizontalAlignment="Stretch" FontFamily="Freestyle Script" />
-        <Button Grid.ColumnSpan="15" Grid.Row="1" Content="Login" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Center"  Click="Login" FontSize="72" Height="Auto" FontWeight="Bold" FontFamily="Blackadder ITC"/>
-        <Button Grid.Column="0" Grid.Row="2" Content="0" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="1" Grid.Row="2" Content="1" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="2" Grid.Row="2" Content="2" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="3" Grid.Row="2" Content="3" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="4" Grid.Row="2" Content="4" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="5" Grid.Row="2" Content="5" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="6" Grid.Row="2" Content="6" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="7" Grid.Row="2" Content="7" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="8" Grid.Row="2" Content="8" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="9" Grid.Row="2" Content="8" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="10" Grid.Row="2" Content="ö" Name="ö" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="11" Grid.Row="2" Content="ü" Name="ü" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="12" Grid.Row="2" Content="ó" Name="ó" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="13" Grid.Row="2" Grid.ColumnSpan="2" Content="DELETE" Click="DeleteButton" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="15" Grid.Row="1" Content="Login" Margin="10,10,10,0" VerticalAlignment="Center"  Click="Login" FontSize="72" Height="Auto" FontWeight="Bold" FontFamily="Blackadder ITC">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="0" Grid.Row="2" Content="0" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" Content="1" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" Content="2" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="2" Content="3" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="4" Grid.Row="2" Content="4" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="5" Grid.Row="2" Content="5" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="6" Grid.Row="2" Content="6" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="7" Grid.Row="2" Content="7" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="8" Grid.Row="2" Content="8" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="9" Grid.Row="2" Content="8" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="10" Grid.Row="2" Content="ö" Name="ö" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="11" Grid.Row="2" Content="ü" Name="ü" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="12" Grid.Row="2" Content="ó" Name="ó" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="13" Grid.Row="2" Grid.ColumnSpan="2" Content="DELETE" Click="DeleteButton" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
-        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Content="TAB" Name="tab" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="2" Grid.Row="3" Content="q" Name="q" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="3" Grid.Row="3" Content="w" Name="w" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="4" Grid.Row="3" Content="e" Name="e" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="5" Grid.Row="3" Content="r" Name="r" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="6" Grid.Row="3" Content="t" Name="t" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="7" Grid.Row="3" Content="z" Name="z" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="8" Grid.Row="3" Content="u" Name="u" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="9" Grid.Row="3" Content="i" Name="i" Click="KeyBoard" Margin="5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="10" Grid.Row="3" Content="o" Name="o" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="11" Grid.Row="3" Content="p" Name="p" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"/>
-        <Button Grid.Column="12" Grid.Row="3" Content="ő" Name="ő" Click="KeyBoard" Margin="5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="13" Grid.Row="3" Content="ú" Name="ú" Click="KeyBoard" Margin="5" FontSize="48" Height="auto"/>
-        <Button Grid.Column="14" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="1" Content="Enter" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Content="TAB" Name="tab" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="3" Content="q" Name="q" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="3" Content="w" Name="w" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="4" Grid.Row="3" Content="e" Name="e" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="5" Grid.Row="3" Content="r" Name="r" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="6" Grid.Row="3" Content="t" Name="t" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="7" Grid.Row="3" Content="z" Name="z" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="8" Grid.Row="3" Content="u" Name="u" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="9" Grid.Row="3" Content="i" Name="i" Click="KeyBoard" Margin="5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="10" Grid.Row="3" Content="o" Name="o" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="11" Grid.Row="3" Content="p" Name="p" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="12" Grid.Row="3" Content="ő" Name="ő" Click="KeyBoard" Margin="5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="13" Grid.Row="3" Content="ú" Name="ú" Click="KeyBoard" Margin="5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="14" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="1" Content="Enter" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
-        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Content="Caps Lock" Name="CapsLock" Click="CapsLockButton" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="2" Grid.Row="4" Content="a" Name="a" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="3" Grid.Row="4" Content="s" Name="s" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="4" Grid.Row="4" Content="d" Name="d" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="5" Grid.Row="4" Content="f" Name="f" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="6" Grid.Row="4" Content="g" Name="g" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="7" Grid.Row="4" Content="h" Name="h" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="8" Grid.Row="4" Content="j" Name="j" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="9" Grid.Row="4" Content="k" Name="k" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="10" Grid.Row="4" Content="l" Name="l" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="11" Grid.Row="4" Content="é" Name="é" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="12" Grid.Row="4" Content="á" Name="á" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="13" Grid.Row="4" Content="ű" Name="ű" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Content="Caps Lock" Name="CapsLock" Click="CapsLockButton" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="4" Content="a" Name="a" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="4" Content="s" Name="s" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="4" Grid.Row="4" Content="d" Name="d" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="5" Grid.Row="4" Content="f" Name="f" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="6" Grid.Row="4" Content="g" Name="g" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="7" Grid.Row="4" Content="h" Name="h" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="8" Grid.Row="4" Content="j" Name="j" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="9" Grid.Row="4" Content="k" Name="k" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="10" Grid.Row="4" Content="l" Name="l" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="11" Grid.Row="4" Content="é" Name="é" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="12" Grid.Row="4" Content="á" Name="á" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="13" Grid.Row="4" Content="ű" Name="ű" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
 
-        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Content="Shift" Click="ShiftPress" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="2" Grid.Row="5" Content="í" Name="í" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="3" Grid.Row="5" Content="y" Name="y" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="4" Grid.Row="5" Content="x" Name="x" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="5" Grid.Row="5" Content="c" Name="c" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="6" Grid.Row="5" Content="v" Name="v" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="7" Grid.Row="5" Content="b" Name="b" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="8" Grid.Row="5" Content="n" Name="n" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="9" Grid.Row="5" Content="m" Name="m" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="10" Grid.Row="5" Content="," Name="spec1" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="11" Grid.Row="5" Content="." Name="spec2" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="12" Grid.Row="5" Content="-" Name="spec3" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
-        <Button Grid.Column="13" Grid.Row="5" Grid.ColumnSpan="2" Content="Shift" Click="ShiftPress" Margin="5 5 5 5" FontSize="48" Height="auto"></Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Content="Shift" Click="ShiftPress" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="5" Content="í" Name="í" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="5" Content="y" Name="y" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="4" Grid.Row="5" Content="x" Name="x" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="5" Grid.Row="5" Content="c" Name="c" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="6" Grid.Row="5" Content="v" Name="v" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="7" Grid.Row="5" Content="b" Name="b" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="8" Grid.Row="5" Content="n" Name="n" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="9" Grid.Row="5" Content="m" Name="m" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="10" Grid.Row="5" Content="," Name="spec1" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="11" Grid.Row="5" Content="." Name="spec2" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="12" Grid.Row="5" Content="-" Name="spec3" Click="KeyBoard" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Column="13" Grid.Row="5" Grid.ColumnSpan="2" Content="Shift" Click="ShiftPress" Margin="5 5 5 5" FontSize="48" Height="auto">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Cyan"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
