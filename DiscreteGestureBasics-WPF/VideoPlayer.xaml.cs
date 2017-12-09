@@ -25,7 +25,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         public VideoPlayer()
         {
             InitializeComponent();
-            DirectoryInfo d = new DirectoryInfo(@"C:\LOTR");
+            DirectoryInfo d = new DirectoryInfo(@".\LOTR");
             Files = d.GetFiles("*.mp4");
 
             //playVideo(recognisedMovement);

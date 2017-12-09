@@ -26,6 +26,9 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private readonly string[] Gandalf = { "GandalfP1", "GandalfP2", "GandalfP3", "GandalfP4" };
         private Boolean[] GandalfPr = { false, false, false, false };
 
+        private readonly string[] Goku = { "GokuP1", "GokuP2" };
+        private Boolean[] GokuPr = { false, false };
+
         private string videoPath = null;
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
         private VisualGestureBuilderFrameSource vgbFrameSource = null;
@@ -208,7 +211,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                             GandalfPr[2] = false;
                                             GandalfPr[3] = false;
 
-                                            tmp.status(GandalfPr);
+                                           // tmp.status(GandalfPr);
 
                                             //tmp.Show();
                                         }
@@ -238,7 +241,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                          {
                                             GandalfPr[1] = true;
 
-                                            tmp.status(GandalfPr);
+                                           // tmp.status(GandalfPr);
                                             //tmp.Show();
 
 
@@ -269,7 +272,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[3] == false)
                                         {
                                             GandalfPr[2] = true;
-                                            tmp.status(GandalfPr);
+                                           // tmp.status(GandalfPr);
                                             //tmp.Show();
 
                                         }
@@ -300,8 +303,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true)
                                         {
                                             GandalfPr[3] = true;
-                                            tmp.status(GandalfPr);
-                                            tmp.Show();
+                                           // tmp.status(GandalfPr);
+                                            //tmp.Show();
 
                                         }
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true && GandalfPr[3] == true)
@@ -320,12 +323,78 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                     
                                 }
+                            }
+
+
+                            if (gesture.Name.Equals(this.Goku[0]) && gesture.GestureType == GestureType.Discrete)
+                            {
+
+
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+
+                                    if (result.Confidence > 0.3f)
+                                    {
+
+                                        if (GokuPr[1] == false)
+                                        {
+                                            GokuPr[0] = true;
+                                           // tmp.status(GokuPr);
+                                            //tmp.Show();
+                                        }
+                                        else
+                                        {
+                                            GandalfPr[0] = true;
+                                            GandalfPr[1] = false;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            if (gesture.Name.Equals(this.Goku[1]) && gesture.GestureType == GestureType.Discrete)
+                            {
+
+
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+
+                                    if (result.Confidence > 0.3f)
+                                    {
+
+                                        if (GokuPr[0] == true)
+                                        {
+                                            GokuPr[1] = true;
+                                           // tmp.status(GokuPr);
+                                            //tmp.Show();
+                                        }
+                                        if (GokuPr[0] == true && GokuPr[1] == true)
+                                        {
+
+                                            if (w1 == null)
+                                            {
+                                                w1 = new VideoPlayer();
+
+                                                w1.Show();
+                                                w1.playVideo(videoPath);
+                                            }
+
+                                        }
+                                    }
+                                }
 
 
                             }
-                        
-                         
-
                         }
                     }
                 }
