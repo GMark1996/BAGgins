@@ -36,8 +36,28 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             foreach (FileInfo f in Files)
             {
                 if (f.Name.Split('.').First() == movement)
+                {
                     VideoControl.Source = new Uri(f.FullName);
+                    VideoControl.MediaEnded += new RoutedEventHandler(gif_MediaEnded);
+                }
             }
+
+        }
+
+        private void gif_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            DiscreteGestureBasicsWPF.KinectMainWindow.setSensitivity(4f);
+            GestureMenu.Finished();
+            this.Close();
+        }
+
+        public void endGame()
+        {
+            DirectoryInfo d = new DirectoryInfo(@".\LOTR\END");
+            FileInfo[] f = d.GetFiles("*.mp4");
+            VideoControl.Source = new Uri(f[0].FullName);
+
+
         }
     }
 }

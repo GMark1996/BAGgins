@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="test" Height="300" Width="300">
     <Grid>
-        <TextBlock Name="asd">ASD</TextBlock>
+        <MediaElement Name="VideoControl" Margin="0,22,0,10" />
     </Grid>
 </Window>

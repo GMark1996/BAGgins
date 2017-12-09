@@ -57,7 +57,7 @@ namespace DiscreteGestureBasicsWPF
         public float cursorSmoothing = CURSOR_SMOOTHING;
 
         // Default values
-        public const float MOUSE_SENSITIVITY = 3.5f;
+        public static float MOUSE_SENSITIVITY = 4.0f;
         public const float TIME_REQUIRED = 2f;
         public const float PAUSE_THRESOLD = 60f;
         public const bool DO_CLICK = true;

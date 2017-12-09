@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Microsoft.Samples.Kinect.DiscreteGestureBasics"
         mc:Ignorable="d"
-        Title="Window1" Height="300" Width="300" WindowState="Maximized">
+        Title="Window1" Height="300" Width="300" WindowState="Maximized" WindowStyle="None">
+
     <Grid>
-        <MediaElement Name="VideoControl" />
+        <MediaElement Name="VideoControl" Margin="0,22,0,10" />
     </Grid>
 </Window>

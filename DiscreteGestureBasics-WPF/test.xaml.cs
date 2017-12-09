@@ -24,9 +24,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             InitializeComponent();
         }
 
-        public void status(Boolean[] tmp)
-        {
-            asd.Text = tmp[0].ToString()+ tmp[1].ToString()+ tmp[2].ToString()+ tmp[3].ToString();
-        }
+       
     }
 }

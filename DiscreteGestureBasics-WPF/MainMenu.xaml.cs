@@ -50,5 +50,10 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             ns.Navigate(new Uri("GestureMenu.xaml", UriKind.Relative));
 
         }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

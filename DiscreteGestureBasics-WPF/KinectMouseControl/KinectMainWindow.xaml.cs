@@ -5,9 +5,10 @@ namespace DiscreteGestureBasicsWPF
 {
     public partial class KinectMainWindow : Window
     {
-        KinectControl kinectCtrl = new KinectControl();
+        static KinectControl kinectCtrl = new KinectControl();
+        private static KinectMainWindow kinectwindow;
 
-        public KinectMainWindow()
+        private KinectMainWindow()
         {
             InitializeComponent();
         }
@@ -167,7 +168,24 @@ namespace DiscreteGestureBasicsWPF
                 Microsoft.Samples.Kinect.GestureBasics.Properties.Settings.Default.Save();
             }
         }
+        public static KinectMainWindow getInstance()
+        {
+            if(kinectwindow == null)
+            {
+                kinectwindow = new KinectMainWindow();
+            }
+            return kinectwindow;
+        }
 
+        ~KinectMainWindow()
+        {
+            kinectwindow = null;
+        }
+
+        public static void setSensitivity(float value) 
+        {
+            kinectCtrl.mouseSensitivity = value;
+        }
 
     }
 

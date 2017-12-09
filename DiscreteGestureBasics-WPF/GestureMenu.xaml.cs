@@ -27,12 +27,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         KinectRecognise knr = null;
         private KinectSensor kinectSensor = null;
         private BodyFrameReader bodyFrameReader = null;
-
-        ListBox lb = new ListBox();
+        public static Grid GestureGrid = null;
+        public static ListBox lb = new ListBox();
+        public static MediaElement currentMediaElement = null;
+        public static int finished =  0;
         public GestureMenu()
         {
             InitializeComponent();
-
+            GestureGrid = gestureGifs;
             this.kinectSensor = KinectSensor.GetDefault();
 
             // open the sensor
@@ -77,6 +79,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         private void openGesture(object sender, RoutedEventArgs e)
         {
+            DiscreteGestureBasicsWPF.KinectMainWindow.setSensitivity(0.0f);
             MediaElement litem = ((MediaElement)sender);
             Console.Out.WriteLine(litem.Name);
             Console.Out.WriteLine("FUUUUUUUUUUUUUUUUUUUUCK");
@@ -93,7 +96,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             mediaElement.MediaEnded += new RoutedEventHandler(gif_MediaEnded);           
             mediaElement.MouseDown += new MouseButtonEventHandler(closeGesture);
             mediaElement.Source = litem.Source;
-            
+
+            currentMediaElement = mediaElement;
             gestureGifs.Children.Add(mediaElement);
         }
 
@@ -108,6 +112,23 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
 
+        }
+
+        public static void Finished()
+        {
+            GestureMenu.finished++;
+            test test = new test();
+            
+            if (GestureDetector.acceptedGestures.All(x => x.Value))
+            {
+                if(GestureDetector.acceptedGestures.Count == 2)
+                {
+                    VideoPlayer p = new VideoPlayer();
+                    p.endGame();
+                    p.Show();
+                }
+                  
+            }
         }
     }
 }

@@ -29,6 +29,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private readonly string[] Goku = { "GokuP1", "GokuP2" };
         private Boolean[] GokuPr = { false, false };
 
+        public static Dictionary<String, Boolean> acceptedGestures = new Dictionary<String, Boolean>();
+        public static readonly int countOfGestures = 2;
         private string videoPath = null;
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
         private VisualGestureBuilderFrameSource vgbFrameSource = null;
@@ -173,6 +175,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <param name="e">event arguments</param>
         private void Reader_GestureFrameArrived(object sender, VisualGestureBuilderFrameArrivedEventArgs e)
         {
+
             VisualGestureBuilderFrameReference frameReference = e.FrameReference;
             using (VisualGestureBuilderFrame frame = frameReference.AcquireFrame())
             {
@@ -210,7 +213,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                             GandalfPr[1] = false;
                                             GandalfPr[2] = false;
                                             GandalfPr[3] = false;
-
+                                            
                                            // tmp.status(GandalfPr);
 
                                             //tmp.Show();
@@ -225,7 +228,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             
                             if (gesture.Name.Equals(this.Gandalf[1]) && gesture.GestureType == GestureType.Discrete)
                             {
-
+                                
                                
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
@@ -310,11 +313,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true && GandalfPr[3] == true)
                                         {
                                             if (w1 == null)
-                                            {
-                                                w1 = new VideoPlayer();
-
-                                                w1.Show();
-                                                w1.playVideo(videoPath);
+                                            {                                               
+                                                closeGesture();
                                                 return;
                                             }
                                         }
@@ -384,10 +384,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                             if (w1 == null)
                                             {
-                                                w1 = new VideoPlayer();
-
-                                                w1.Show();
-                                                w1.playVideo(videoPath);
+                                                closeGesture();
                                                 return;
                                             }
 
@@ -397,10 +394,28 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
 
                             }
+
+                         
+
                         }
                     }
                 }
             }
+        }
+
+        private void closeGesture()
+        {
+            w1 = new VideoPlayer();
+            w1.Show();
+            w1.playVideo(videoPath);
+
+            if (!acceptedGestures.ContainsKey(videoPath))
+            {
+                acceptedGestures.Add(videoPath, true);
+            }
+
+            GestureMenu.GestureGrid.Children.Remove(GestureMenu.currentMediaElement);
+            GestureMenu.lb.Visibility = System.Windows.Visibility.Visible;
         }
 
         /// <summary>
@@ -413,5 +428,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             // update the GestureResultView object to show the 'Not Tracked' image in the UI
             this.GestureResultView.UpdateGestureResult(false, false, 0.0f);
         }
+
+       
     }
 }
