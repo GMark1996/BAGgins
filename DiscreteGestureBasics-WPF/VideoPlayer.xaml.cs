@@ -56,8 +56,13 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             DirectoryInfo d = new DirectoryInfo(@".\LOTR\END");
             FileInfo[] f = d.GetFiles("*.mp4");
             VideoControl.Source = new Uri(f[0].FullName);
-
-
+            VideoControl.MediaEnded += new RoutedEventHandler(gif_MediaEnded);
         }
+
+        public void closethis()
+        {
+            this.Close();
+        }
+
     }
 }

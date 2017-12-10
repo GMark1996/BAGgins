@@ -281,7 +281,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                         {
                                             if (w1 == null)
                                             {
-                                                confidencyGandalf[4] = result.Confidence;                                              
+                                                confidencyGandalf[3] = result.Confidence;                                              
                                                 us.addScore("LordOfTheKinect",getSum(confidencyGandalf));
                                                 closeGesture();
                                                 return;

@@ -24,6 +24,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
     public partial class GestureMenu : Page
     {
+
+        private static Boolean tescoValueFinished = false;
         KinectRecognise knr = null;
         private KinectSensor kinectSensor = null;
         private BodyFrameReader bodyFrameReader = null;
@@ -81,8 +83,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             DiscreteGestureBasicsWPF.KinectMainWindow.setSensitivity(0.0f);
             MediaElement litem = ((MediaElement)sender);
-            Console.Out.WriteLine(litem.Name);
-            Console.Out.WriteLine("FUUUUUUUUUUUUUUUUUUUUCK");
             knr = new KinectRecognise();
 
             knr.addDetector(@"Database\"+ litem.Name +".gbd", litem.Name);
@@ -116,18 +116,21 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         public static void Finished()
         {
+
             GestureMenu.finished++;
             test test = new test();
-            
-            if (GestureDetector.acceptedGestures.All(x => x.Value))
+            if (!tescoValueFinished)
             {
-                if(GestureDetector.acceptedGestures.Count == 2)
+                if (GestureDetector.acceptedGestures.All(x => x.Value))
                 {
-                    VideoPlayer p = new VideoPlayer();
-                    p.endGame();
-                    p.Show();
+                    if (GestureDetector.acceptedGestures.Count == 2)
+                    {
+                        tescoValueFinished = true;
+                        VideoPlayer p = new VideoPlayer();
+                        p.endGame();
+                        p.Show();
+                    }
                 }
-                  
             }
         }
     }

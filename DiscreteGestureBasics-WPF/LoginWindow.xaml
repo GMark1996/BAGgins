@@ -11,7 +11,7 @@
       FontFamily="{StaticResource MaterialDesignFont}">
 
     <Grid>
-        <TextBlock Grid.ColumnSpan="15" Grid.Row="0" Text="Baggins" Name="Bag" Foreground="Gold" TextWrapping="Wrap" FontSize="108" TextAlignment="Center" FontFamily="Freestyle Script" />
+        <TextBlock Grid.ColumnSpan="15" Grid.Row="0" Text="Baggins" Name="Bag" Foreground="Gold" TextWrapping="Wrap" FontSize="50" TextAlignment="Center" FontFamily="Freestyle Script" />
         <TextBox  Grid.ColumnSpan="15" Grid.Row="0" Name="Name" Foreground="Gold" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="72" TextAlignment="Center"  HorizontalAlignment="Stretch" FontFamily="Freestyle Script" />
         <Button Grid.Column="0" Grid.ColumnSpan="15" Grid.Row="1" Content="Login" Margin="10,10,10,0" VerticalAlignment="Center"  Click="Login" FontSize="72" Height="Auto" FontWeight="Bold" FontFamily="Blackadder ITC">
             <Button.Style>
