@@ -8,6 +8,6 @@
         Title="Window1" Height="300" Width="300" WindowState="Maximized" WindowStyle="None">
 
     <Grid>
-        <MediaElement Name="VideoControl" Margin="0,22,0,10" />
+        <MediaElement Name="VideoControl"/>
     </Grid>
 </Window>

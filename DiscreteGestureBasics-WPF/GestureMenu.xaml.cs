@@ -111,7 +111,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
-
         }
 
         public static void Finished()

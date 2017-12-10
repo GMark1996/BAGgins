@@ -204,7 +204,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
-                                    if (result.Confidence > 0.2f)
+                                    if (result.Confidence > 0.05f)
                                     {
                                         if (GandalfPr[1] == false && GandalfPr[2] == false && GandalfPr[3] == false)
                                         {
@@ -227,7 +227,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                 {
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
-                                    if (result.Confidence > 0.2f)
+                                    if (result.Confidence > 0.05f)
                                     {
                                          if (GandalfPr[0] == true && GandalfPr[2]==false && GandalfPr[3]== false)
                                          {
@@ -247,7 +247,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                 {
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
-                                    if (result.Confidence > 0.3f)
+                                    if (result.Confidence > 0.05f)
                                     {
 
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[3] == false)
@@ -270,7 +270,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
-                                    if (result.Confidence > 0.3f)
+                                    if (result.Confidence > 0.05f)
                                     {
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true)
                                         {
@@ -282,7 +282,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                             if (w1 == null)
                                             {
                                                 confidencyGandalf[3] = result.Confidence;                                              
-                                                us.addScore("LordOfTheKinect",getSum(confidencyGandalf));
+                                                us.addScore("LordOfTheKinect",getConfidency(confidencyGandalf));
                                                 closeGesture();
                                                 return;
                                             }
@@ -337,7 +337,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                         {
                                             if (w1 == null)
                                             {
-                                                us.addScore("Goku", getSum(confidencyGoku));
+                                                us.addScore("Goku", getConfidency(confidencyGoku));
                                                 closeGesture();
                                                 return;
                                             }
@@ -382,14 +382,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             this.GestureResultView.UpdateGestureResult(false, false, 0.0f);
         }
 
-        private float getSum(float[] arr)
+        private float getConfidency(float[] arr)
         {
             float sum = 0;
             for (int i = 0; i < arr.Length; i++)
             {
                 sum += arr[i];
             }
-            return sum;
+            return sum/arr.Length;
         }
 
        

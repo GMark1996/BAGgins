@@ -40,8 +40,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         }
         private void LogOut(object sender, RoutedEventArgs e)
         {
-            NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("LoginWindow.xaml", UriKind.Relative));
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
         }
 
         private void GestureMenu(object sender, RoutedEventArgs e)
