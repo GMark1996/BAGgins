@@ -22,6 +22,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     public partial class LoginWindow : Page
     {
         public static DiscreteGestureBasicsWPF.KinectMainWindow kinectMainWindow;
+        public static String loginName = null;
         List<Button> buttons = new List<Button>();
         List<UserScore> Users = new List<UserScore>();
         Boolean useUpperCase = false;
@@ -54,6 +55,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         private void Login(object sender, RoutedEventArgs e)
         {
+               loginName = Name.Text;
                UserScore user = new UserScore(Name.Text);
                NavigationService ns = NavigationService.GetNavigationService(this);
                ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));

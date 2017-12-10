@@ -25,9 +25,13 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private static test tmp = new test();
         private readonly string[] Gandalf = { "GandalfP1", "GandalfP2", "GandalfP3", "GandalfP4" };
         private Boolean[] GandalfPr = { false, false, false, false };
+        float[] confidencyGandalf = new float[4];
 
         private readonly string[] Goku = { "GokuP1", "GokuP2" };
         private Boolean[] GokuPr = { false, false };
+        float[] confidencyGoku = new float[2];
+
+        private UserScore us = new UserScore(LoginWindow.loginName);
 
         public static Dictionary<String, Boolean> acceptedGestures = new Dictionary<String, Boolean>();
         public static readonly int countOfGestures = 2;
@@ -188,11 +192,10 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                     {
                         // we only have one gesture in this source object, but you can get multiple gestures
                         foreach (Gesture gesture in this.vgbFrameSource.Gestures)
-                        {
+                        {                            
+
                             if (gesture.Name.Equals(this.Gandalf[0]) && gesture.GestureType == GestureType.Discrete)
                             {
-
-                               
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
@@ -203,39 +206,25 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                     if (result.Confidence > 0.2f)
                                     {
-
-                                        
-
                                         if (GandalfPr[1] == false && GandalfPr[2] == false && GandalfPr[3] == false)
                                         {
-
                                             GandalfPr[0] = true;
                                             GandalfPr[1] = false;
                                             GandalfPr[2] = false;
                                             GandalfPr[3] = false;
-                                            
-                                           // tmp.status(GandalfPr);
-
-                                            //tmp.Show();
+                                            confidencyGandalf[0] = result.Confidence;
                                         }
                                     }
-
-
                                 }
                             }
-                       
-
-                            
+                                                  
                             if (gesture.Name.Equals(this.Gandalf[1]) && gesture.GestureType == GestureType.Discrete)
-                            {
-                                
-                               
+                            {                                                             
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
                                 if (result != null)
                                 {
-                                    // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
                                     if (result.Confidence > 0.2f)
@@ -243,30 +232,19 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                          if (GandalfPr[0] == true && GandalfPr[2]==false && GandalfPr[3]== false)
                                          {
                                             GandalfPr[1] = true;
-
-                                           // tmp.status(GandalfPr);
-                                            //tmp.Show();
-
-
+                                            confidencyGandalf[1] = result.Confidence;
                                           }
                                     }
-
                                 }
-
-
                             }
-                          
-                         
+                                                  
                             if (gesture.Name.Equals(this.Gandalf[2]) && gesture.GestureType == GestureType.Discrete)
                             {
-
-                               
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
                                 if (result != null)
                                 {
-                                    // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
                                     if (result.Confidence > 0.3f)
@@ -275,22 +253,15 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[3] == false)
                                         {
                                             GandalfPr[2] = true;
-                                           // tmp.status(GandalfPr);
-                                            //tmp.Show();
-
+                                            confidencyGandalf[2] = result.Confidence;
                                         }
                                     }
                                 }
-
-
-                            }
-                      
-                        
+                            }                                           
                             
                             if (gesture.Name.Equals(this.Gandalf[3]) && gesture.GestureType == GestureType.Discrete)
                             {
 
-                                Console.Out.WriteLine("MEGPROBALOM FELISMERNI");
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
@@ -301,57 +272,46 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                                     if (result.Confidence > 0.3f)
                                     {
-
-
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true)
                                         {
                                             GandalfPr[3] = true;
-                                           // tmp.status(GandalfPr);
-                                            //tmp.Show();
-
+                                            confidencyGandalf[3] = result.Confidence;
                                         }
                                         if (GandalfPr[0] == true && GandalfPr[1] == true && GandalfPr[2] == true && GandalfPr[3] == true)
                                         {
                                             if (w1 == null)
-                                            {                                               
+                                            {
+                                                confidencyGandalf[4] = result.Confidence;                                              
+                                                us.addScore("LordOfTheKinect",getSum(confidencyGandalf));
                                                 closeGesture();
                                                 return;
                                             }
                                         }
-
-
-                                    }
-
-                                    
+                                    }  
                                 }
                             }
 
 
                             if (gesture.Name.Equals(this.Goku[0]) && gesture.GestureType == GestureType.Discrete)
                             {
-
-
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
                                 if (result != null)
                                 {
-                                    // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
                                     if (result.Confidence > 0.3f)
                                     {
-
                                         if (GokuPr[1] == false)
                                         {
                                             GokuPr[0] = true;
-                                           // tmp.status(GokuPr);
-                                            //tmp.Show();
+                                            confidencyGoku[0] = result.Confidence;
                                         }
                                         else
                                         {
-                                            GandalfPr[0] = true;
-                                            GandalfPr[1] = false;
+                                            GokuPr[0] = true;
+                                            GokuPr[1] = false;
                                         }
                                     }
                                 }
@@ -360,34 +320,27 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                             if (gesture.Name.Equals(this.Goku[1]) && gesture.GestureType == GestureType.Discrete)
                             {
-
-
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
                                 if (result != null)
                                 {
-                                    // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
 
                                     if (result.Confidence > 0.3f)
                                     {
-
                                         if (GokuPr[0] == true)
                                         {
                                             GokuPr[1] = true;
-                                           // tmp.status(GokuPr);
-                                            //tmp.Show();
                                         }
                                         if (GokuPr[0] == true && GokuPr[1] == true)
                                         {
-
                                             if (w1 == null)
                                             {
+                                                us.addScore("Goku", getSum(confidencyGoku));
                                                 closeGesture();
                                                 return;
                                             }
-
                                         }
                                     }
                                 }
@@ -404,7 +357,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         }
 
         private void closeGesture()
-        {
+        {            
             w1 = new VideoPlayer();
             w1.Show();
             w1.playVideo(videoPath);
@@ -427,6 +380,16 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             // update the GestureResultView object to show the 'Not Tracked' image in the UI
             this.GestureResultView.UpdateGestureResult(false, false, 0.0f);
+        }
+
+        private float getSum(float[] arr)
+        {
+            float sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
         }
 
        
